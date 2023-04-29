@@ -6,7 +6,7 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Search from './search/search';
-
+import Login from './login/index'
 
 
 
@@ -15,7 +15,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Search />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </Router>
   );

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/button-has-type */
 /* eslint-disable prettier/prettier */
@@ -23,6 +25,7 @@ function Search() {
   const [memberTypeFilter, setMemberTypeFilter] = useState('All');
   const [activeStatusFilter, setActiveStatusFilter] = useState('All');
   const [showMenu, setShowMenu] = useState(false);
+  const [selectedMember, setSelectedMember] = useState('')
 
 
 
@@ -99,7 +102,7 @@ function Search() {
 
     <div className='container-fluid'>
 
-      <div className='row'>
+      <div className='row h-100'>
 
         <div className='col-2 pl-0 pr-0'>
           <Nav/>
@@ -131,13 +134,15 @@ function Search() {
 
           </div>
 
+          <div>{selectedMember}</div>
+
           <div className="searchResults d-flex flex-wrap justify-content-center">
 
 {membersToDisplay.map((member) => (
 
 
 
-  <div key={member.member_id} className="profileCardBody d-flex flex-column align-items-center  p-2 m-1 animate__animated animate__fadeInUp">
+  <div key={member.member_id} className="profileCardBody d-flex flex-column align-items-center  p-2 m-1 animate__animated animate__fadeInUp" onClick={()=> setSelectedMember(member.member_id)}>
 
     <Avatar
       size={50}
@@ -157,8 +162,6 @@ function Search() {
 </div>
 
         </div>
-
-
 
       </div>
     </div>

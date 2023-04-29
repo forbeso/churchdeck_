@@ -30,7 +30,7 @@ function Nav() {
                   ? 'nav-link d-flex  align-items-center link setActive'
                   : 'nav-link d-flex  align-items-center link'
               }
-              to="/land"
+              to="/search"
               style={listStyle}
             >
               <Dot />
@@ -43,7 +43,7 @@ function Nav() {
 
           <li className="nav-item">
             <NavLink
-              to="/login"
+              to="/"
               className={({ isActive }) =>
                 isActive
                   ? 'nav-link d-flex  align-items-center link setActive'
@@ -55,56 +55,6 @@ function Nav() {
                 password{' '}
               </i>
               Login
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink
-              to="/search"
-              className={({ isActive }) =>
-                isActive
-                  ? 'nav-link d-flex  align-items-center link setActive'
-                  : 'nav-link d-flex  align-items-center link'
-              }
-              style={listStyle}
-            >
-              <i className="material-icons-round d-flex  align-items-center">
-                search{' '}
-              </i>
-              Search
-            </NavLink>
-          </li>
-
-          <li className="nav-item">
-            <NavLink
-              to="/sermon"
-              className={({ isActive }) =>
-                isActive
-                  ? 'nav-link d-flex  align-items-center link setActive'
-                  : 'nav-link d-flex  align-items-center link'
-              }
-              style={listStyle}
-            >
-              <i className="material-icons-round d-flex  align-items-center">
-                speaker_notes{' '}
-              </i>
-              Sermon
-            </NavLink>
-          </li>
-
-          <li className="nav-item">
-            <NavLink
-              to="/activity"
-              className={({ isActive }) =>
-                isActive
-                  ? 'nav-link d-flex  align-items-center link setActive'
-                  : 'nav-link d-flex  align-items-center link'
-              }
-              style={listStyle}
-            >
-              <i className="material-icons-round d-flex  align-items-center">
-                diversity_2{' '}
-              </i>
-              Activities
             </NavLink>
           </li>
 
@@ -122,23 +72,6 @@ function Nav() {
                 campaign{' '}
               </i>
               Broadcast
-            </NavLink>
-          </li>
-
-          <li className="nav-item">
-            <NavLink
-              to="/finance_dash"
-              className={({ isActive }) =>
-                isActive
-                  ? 'nav-link d-flex  align-items-center link setActive'
-                  : 'nav-link d-flex  align-items-center link'
-              }
-              style={listStyle}
-            >
-              <i className="material-icons-round d-flex  align-items-center">
-                currency_exchange{' '}
-              </i>
-              Finance
             </NavLink>
           </li>
 
