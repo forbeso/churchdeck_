@@ -70,12 +70,34 @@
   width: 100%;
   font-family: 'Roboto', sans-serif;
 
+  .dropdown{
+    .active_inactive_pill{
+    border: none;
+    outline: none;
+    width: fit-content;
+    height: 35px;
+    border-radius: 10rem;
+    background-color:lightgrey;
+    }
+
+
+  }
 
   .pill{
 
     border: none;
     outline: none;
     width: 100px;
+    height: 35px;
+    border-radius: 10rem;
+    background-color:lightgrey;
+
+  }
+
+  .addPill{
+    border: none;
+    outline: none;
+    width: fit-content;
     height: 35px;
     border-radius: 10rem;
     background-color:lightgrey;
@@ -108,3 +130,10 @@
 .offcanvas-backdrop.show {
   opacity: 0.5;
 }
+
+
+.form-group{
+  width:60%;
+}
+
+

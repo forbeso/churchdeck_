@@ -33,11 +33,11 @@ function Nav() {
               to="/search"
               style={listStyle}
             >
-              <Dot />
+
               <i className="material-icons-round d-flex  align-items-center">
-                home{' '}
+                search{' '}
               </i>{' '}
-              Home
+              Find
             </NavLink>
           </li>
 
@@ -58,22 +58,7 @@ function Nav() {
             </NavLink>
           </li>
 
-          <li className="nav-item">
-            <NavLink
-              to="/broadcast"
-              className={({ isActive }) =>
-                isActive
-                  ? 'nav-link d-flex  align-items-center link setActive'
-                  : 'nav-link d-flex  align-items-center link'
-              }
-              style={listStyle}
-            >
-              <i className="material-icons-round d-flex  align-items-center">
-                campaign{' '}
-              </i>
-              Broadcast
-            </NavLink>
-          </li>
+
 
           <li className="nav-item">
             <NavLink
@@ -85,10 +70,10 @@ function Nav() {
               }
               style={listStyle}
             >
-              <i className="material-icons-round d-flex  align-items-center">
-                settings{' '}
+              <i className="material-icons-outlined d-flex  align-items-center">
+                stacked_bar_chart{' '}
               </i>{' '}
-              Settings
+              Data
             </NavLink>
           </li>
         </ul>

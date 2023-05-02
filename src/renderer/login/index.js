@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import supabase from 'renderer/supabase';
+import { SupabaseContext } from '../SupabaseContext';
 
 import './style.scss';
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('odainef@gmail.com');
+  const [password, setPassword] = useState('testing123');
+  const [sessionData, setSessionData] = useState('');
+
+
+  const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -14,6 +20,20 @@ function Login() {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
+
+  async function signInWithEmail() {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      console.log(error);
+    } else {
+      // Redirect to the Search page
+      navigate('/search');
+    }
+  }
 
   return (
     <div className="container-fluid d-flex justify-content-center">
@@ -34,7 +54,7 @@ function Login() {
             // autoFocus
             required
             value={email}
-            onChange={handleEmailChange}
+            onChange={(query) => handleEmailChange(query)}
           />
 
           {/* <label className="usernameLabel">Password</label> */}
@@ -44,13 +64,17 @@ function Login() {
             className="input mb-3"
             required
             value={password}
-            onChange={handlePasswordChange}
+            onChange={(query) => handlePasswordChange(query)}
           />
 
           <p className="errorMsg" />
           <p className="errorMsg" />
 
-          <button type="button" className="btn btn-success signInButton mb-3">
+          <button
+            type="button"
+            className="btn btn-success signInButton mb-3"
+            onClick={() => signInWithEmail()}
+          >
             Sign in
           </button>
           <Link to="/Search">Go to home</Link>
