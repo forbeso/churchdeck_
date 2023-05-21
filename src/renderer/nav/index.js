@@ -75,7 +75,7 @@ function Nav() {
 
           <li className="nav-item">
             <NavLink
-              to="/cdeck/churchinfo"
+              to="/cdeck/sermon"
               className={({ isActive }) =>
                 isActive
                   ? 'nav-link d-flex  align-items-center link setActive'
@@ -87,6 +87,23 @@ function Nav() {
                 speaker_notes{' '}
               </i>{' '}
               Sermon
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              to="/cdeck/activities"
+              className={({ isActive }) =>
+                isActive
+                  ? 'nav-link d-flex  align-items-center link setActive'
+                  : 'nav-link d-flex  align-items-center link'
+              }
+              style={listStyle}
+            >
+              <i className="material-icons-outlined d-flex  align-items-center">
+                pool{' '}
+              </i>{' '}
+              Activities
             </NavLink>
           </li>
 

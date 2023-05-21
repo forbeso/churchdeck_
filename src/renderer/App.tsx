@@ -18,6 +18,8 @@ import Info from './info/info';
 
 
 import { SupabaseProvider } from './SupabaseContext';
+import Activities from './activities/activities';
+import Sermon from './sermon/sermon';
 
 
 export default function App() {
@@ -36,6 +38,8 @@ export default function App() {
 
           <Route path="/cdeck/dashboard" element={<Data />} />
           <Route path="/cdeck/home" element={<Home />} />
+          <Route path="/cdeck/activities" element={<Activities />} />
+          <Route path="/cdeck/sermon" element={<Sermon />} />
         </Route>
         </Routes>
       </SupabaseProvider>
