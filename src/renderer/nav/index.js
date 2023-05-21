@@ -17,7 +17,7 @@ function Nav() {
           {/* <span className="material-icons-round d-flex align-items-center">
                     church
                 </span>  */}
-          churchdeck
+          ChurchDeck
         </div>
       </div>
 
@@ -30,39 +30,35 @@ function Nav() {
                   ? 'nav-link d-flex  align-items-center link setActive'
                   : 'nav-link d-flex  align-items-center link'
               }
-              to="/search"
+              to="/cdeck/home"
               style={listStyle}
             >
-
               <i className="material-icons-round d-flex  align-items-center">
-                search{' '}
+                home{' '}
               </i>{' '}
-              Find
+              Home
             </NavLink>
           </li>
-
           <li className="nav-item">
             <NavLink
-              to="/"
               className={({ isActive }) =>
                 isActive
                   ? 'nav-link d-flex  align-items-center link setActive'
                   : 'nav-link d-flex  align-items-center link'
               }
+              to="/cdeck/search"
               style={listStyle}
             >
               <i className="material-icons-round d-flex  align-items-center">
-                password{' '}
-              </i>
-              Login
+                search{' '}
+              </i>{' '}
+              Search
             </NavLink>
           </li>
 
-
-
           <li className="nav-item">
             <NavLink
-              to="/settings"
+              to="/cdeck/dashboard"
               className={({ isActive }) =>
                 isActive
                   ? 'nav-link d-flex  align-items-center link setActive'
@@ -73,7 +69,41 @@ function Nav() {
               <i className="material-icons-outlined d-flex  align-items-center">
                 stacked_bar_chart{' '}
               </i>{' '}
-              Data
+              Dashboard
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              to="/cdeck/churchinfo"
+              className={({ isActive }) =>
+                isActive
+                  ? 'nav-link d-flex  align-items-center link setActive'
+                  : 'nav-link d-flex  align-items-center link'
+              }
+              style={listStyle}
+            >
+              <i className="material-icons-outlined d-flex  align-items-center">
+                speaker_notes{' '}
+              </i>{' '}
+              Sermon
+            </NavLink>
+          </li>
+
+          <li className="nav-item">
+            <NavLink
+              to="/cdeck/churchinfo"
+              className={({ isActive }) =>
+                isActive
+                  ? 'nav-link d-flex  align-items-center link setActive'
+                  : 'nav-link d-flex  align-items-center link'
+              }
+              style={listStyle}
+            >
+              <i className="material-icons-outlined d-flex  align-items-center">
+                church{' '}
+              </i>{' '}
+              About ALM
             </NavLink>
           </li>
         </ul>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import supabase from 'renderer/supabase';
@@ -6,10 +7,11 @@ import { SupabaseContext } from '../SupabaseContext';
 import './style.scss';
 
 function Login() {
+
   const [email, setEmail] = useState('odainef@gmail.com');
   const [password, setPassword] = useState('testing123');
   const [sessionData, setSessionData] = useState('');
-
+  const [loginError, setLoginError] = useState('');
 
   const navigate = useNavigate();
 
@@ -28,10 +30,10 @@ function Login() {
     });
 
     if (error) {
-      console.log(error);
+      setLoginError(error.message);
     } else {
       // Redirect to the Search page
-      navigate('/search');
+      navigate('/cdeck/home');
     }
   }
 
@@ -40,7 +42,7 @@ function Login() {
       <div className="row row-width">
         <div className="col-12 loginLeftContainer d-flex justify-content-center align-items-center">
           <h1 className="title animate__animated animate__fadeInDown">
-            church<span>deck</span>
+            Church<span>Deck</span>
           </h1>
           <p className="title mb-5 small animate__animated animate__fadeInUp">
             by Abundant Life Ministries
@@ -67,8 +69,9 @@ function Login() {
             onChange={(query) => handlePasswordChange(query)}
           />
 
-          <p className="errorMsg" />
-          <p className="errorMsg" />
+          <div className="bg-danger p-2 mb-3">
+            <span className="errorMsg text-white">{loginError}</span>
+          </div>
 
           <button
             type="button"
@@ -77,7 +80,6 @@ function Login() {
           >
             Sign in
           </button>
-          <Link to="/Search">Go to home</Link>
 
           {/* <div>
                 <input type="checkbox" className="form-check-input" id="remembermeCheck"></input>

@@ -1,0 +1,49 @@
+.h1-values{
+  font-size: 4.5rem;
+  color: darkgreen;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+canvas {
+  //border: 1px dotted red;
+  width: 220px !important;
+  height: 220px !important;
+}
+
+.chart-container {
+  position: relative;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  .membervals{
+
+  }
+
+}
+
+.chart-container-second {
+  position: relative;
+  width: 55%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
+}
+
+.weekly_visits{
+
+  width: 20%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
+.memberBar{
+
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
